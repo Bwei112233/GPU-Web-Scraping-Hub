@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPU Data Collection</title>
+    <style type="text/css">
+        p {
+          margin: 35px;
+          font-size: 2.25em;
+          color: white;
+        }
+
+
+        h1{
+          font-family: Arial, Helvetica, sans-serif;
+          text-align: center;
+          font-size: 2.5em;
+          color: #FF4D00;
+
+        }
+        body {
+          background-color: #333;
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+          background-size: 100% auto;
+        }
+
+        div{
+            text-align: center;
+            font-size: 5 em;
+        }
+
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: black;
+        }
+
+        li {
+          float: left;
+        }
+
+        li a, .dropbtn {
+          display: inline-block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+
+        .dropbtn {
+
+          background-color: #4CAF50;
+          color: white;
+          padding: 34px;
+          font-size: 64px;
+          border: none;
+          cursor: pointer;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+          position: relative;
+          margin: auto
+          display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+          text-align: center;
+          display: none;
+          position: relative;
+          background-color: #f9f9f9;
+          width:340px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          color: black;
+          padding: 12px 50px;
+          text-decoration: none;
+          display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #3e8e41}
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+          background-color: #3e8e41;
+        }
+      .img-container {
+        position: relative;
+        display: inline;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+        display: block;
+      }
+    </style>
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<ul>
+  <li><a href="#home">About Me</a></li>
+  <li><a href="#news">Contact Info</a></li>
+</ul>
+
+<h1>Welcome to the WebScraping Hub <br></h1>
+
+<p>
+    Use the drop down menu below to choose which website
+    to collect data from major retailers. Your data will be sent to you in a .csv
+   file. Data is collected using python and cleaned using Beautiful Soup. Retailers might
+    block access to their websites if the web scraper is run too frequently. If this happens
+    wait for the cooldown to expire or
+   click here to see sample data. If you have any new features to suggest of bugs to report, feel free to
+    contact me on Github. Enjoy!<br><br>
+</p>
+
+    <span class = "img-container">
+        {% load static %}
+        <a href="https://www.cc.gatech.edu/"><img border ="0" alt = "YouTube button" src = "{% static 'images/buzz.png' %}" height="200" width="200"></a>
+        <a href="https://github.com/Bwei112233/"><img border ="0" alt = "YouTube button" src = "{% static 'images/github2.png' %}" height="200" width="200"></a>
+        <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"><img border ="0" alt = "YouTube button" height="200" src = "{% static 'images/soup.jpg' %}" width="200"></a>
+    </span>
+
+
+
+<br style = "line-height:100px;">
+
+<div class="dropdown">
+    <center>
+    <button class="dropbtn">Get Data!</button>
+  <div class="dropdown-content">
+    <a href="/stores/newegg">Newegg</a>
+    <a href="/stores/micro">MicroCenter</a>
+    <a href="/stores/frys">Fry's Electronics</a>
+      <a href="#">Amazon</a>
+  </div>
+   </center>
+</div>
+
+
+</body>
+</html>
