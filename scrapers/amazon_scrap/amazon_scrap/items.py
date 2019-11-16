@@ -9,6 +9,8 @@ import scrapy
 
 
 class AmazonScrapItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    # product brand shipping price
+    product = scrapy.Field()
+    price = scrapy.Field()
+    # shipping = scrapy.Field()
+

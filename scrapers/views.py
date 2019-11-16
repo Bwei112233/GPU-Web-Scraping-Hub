@@ -48,10 +48,6 @@ def get_GPU_info_Newegg(request):
         f.close()
         uClient.close()
 
-def getGPUInfoAmazon(request):
-    return HttpResponse("rip")
-
-
 def get_GPU_info_MicroCenter(request):
     try:
         url = "https://www.microcenter.com/category/4294966937/video-cards"
